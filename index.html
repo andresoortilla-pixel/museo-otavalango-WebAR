@@ -42,7 +42,7 @@
     <div id="status">⏳ Cargando cámara...</div>
 
     <a-scene
-      mindar-image="imageTargetSrc: ./assets/espectro; autoStart: true;"
+      mindar-image="imageTargetSrc: ./assets/espectro.mind; autoStart: true;"
       color-space="sRGB"
       renderer="colorManagement: true, physicallyCorrectLights"
       vr-mode-ui="enabled: false"
@@ -51,7 +51,7 @@
       <a-assets>
         <video
           id="mi-video"
-          src="./assets/espectro"
+          src="./assets/espectro.mp4"
           preload="auto"
           loop  playsinline webkit-playsinline>
         </video>
@@ -79,8 +79,8 @@
       // Cuando el usuario hace clic, desbloqueamos el video y ocultamos la pantalla negra
       startBtn.addEventListener("click", function () {
         overlayEl.style.display = "none";
-        statusEl.innerText = "📷 Apunta la cámara a la imagen del Telar...";
-        
+        statusEl.innerText = "📷 Apunta la cámara a la imagen ...";
+      
         // Truco de desbloqueo de video
         videoEl.play().then(function () {
           videoEl.pause();
